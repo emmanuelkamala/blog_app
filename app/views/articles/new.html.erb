@@ -1,0 +1,9 @@
+<%= form_for @article do |f| %>
+    <%= f.label :title, "Title" %><br>
+    <%= f.text_field :title, placeholder: "Enter title here" %><br>
+    <%= f.label :body, "Body" %><br>
+    <%= f.text_area :body, placeholder: "Write content" %><br>
+    
+    <%= f.submit "Create Article" %>
+<% end %>
+
