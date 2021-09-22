@@ -15,10 +15,14 @@
   <%= @article.excerpt %>
 </p>
 
-
 <p>
   <strong>Body:</strong>
   <%= @article.body %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @article.published_at %>
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
