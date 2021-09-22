@@ -1,5 +1,22 @@
 require 'rails_helper'
 
-RSpec.describe "articles/index.html.erb", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe "articles/index", type: :view do
+  before(:each) do
+    assign(:articles, [
+      Article.create!(
+        title: "Title",
+        body: "MyText"
+      ),
+      Article.create!(
+        title: "Title",
+        body: "MyText"
+      )
+    ])
+  end
+
+  it "renders a list of articles" do
+    render
+    assert_select "tr>td", text: "Title".to_s, count: 2
+    assert_select "tr>td", text: "MyText".to_s, count: 2
+  end
 end
