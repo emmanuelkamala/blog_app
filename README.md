@@ -1,18 +1,13 @@
-# Project Name
+# Building a Blog
 
-This is a practice project on how to use rspec and capybara to create an app. The focus is mainly on developing an app through creating feature tests.
-
-
-
-Additional description about the project and its features.
+This is a practice project on how to build a blog using Ruby on Rails. The app will have user registration and authentication, creation of posts, categories and comments and how they relate with one another i.e creating associations.
 
 ## Built With
 
-- Ruby '~>2.7'
+- Ruby '~>3.0'
 - Bundler '~> 2.0.0'
 - Rails '~> 6.0.2.1rc1'
 - Postgresql '>= 0.18', '< 2.0'
-- Rspec
 
 ## Live Demo
 
@@ -24,7 +19,7 @@ Coming up...
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-You need to have Ruby 2.7 and Rails 6.0.2.1 installed
+You need to have Ruby 3.0 and Rails 6.0.2.1 installed
 
 
 ### Setup
