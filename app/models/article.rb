@@ -15,4 +15,8 @@ class Article < ApplicationRecord
     "#{title} - #{published_at}"
   end
 
+  def published? 
+    pulished_at.present?
+  end
+
 end
