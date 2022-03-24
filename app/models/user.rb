@@ -5,7 +5,9 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true
   validates :email, length: { in: 5..50 }
-  validates :email, format: { with: /\A[^@][\w.-]+@[\w.-]+[.][az]{2,4}\z/i }
+  #validates :email, format: { with: /\A[^@][\w.-]+@[\w.-]+[.][az]{2,4}\z/i }
+  validates :email, format: { with: /\A[a-zA-Z0-9.!\#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*\z/
+}
   validates :password, confirmation: true, if: :password_required?
   validates :password, length: { in: 4..20 }, if: :password_required?
   validates :password, presence: true, if: :password_required?
