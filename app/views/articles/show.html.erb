@@ -1,6 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @article %>
+<h3>Comments</h3>
+<div id="comments">
+  <%= render @article.comments %>
+</div>
+
+<%= render 'comments/new' %>
+
 
 <div>
   <%= link_to "Edit this article", edit_article_path(@article) %> |

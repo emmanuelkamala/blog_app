@@ -16,7 +16,7 @@ class Article < ApplicationRecord
   end
 
   def published? 
-    pulished_at.present?
+    published_at.present?
   end
 
 end

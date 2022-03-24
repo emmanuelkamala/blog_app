@@ -12,6 +12,9 @@
 
   <body>
     <div class="container-fluid">
+      <%= content_tag :p, notice, class: 'notice' if notice.present? %>
+      <%= content_tag :p, alert, class: 'alert' if alert.present? %>
+
       <%= yield %>
     </div>
   </body>
